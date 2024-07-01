@@ -29,6 +29,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### `npm run deploy`
+
+Publishes static build to GitHub Pages using [gh-pages](https://github.com/tschaub/gh-pages). Tutorial available [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f).
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
