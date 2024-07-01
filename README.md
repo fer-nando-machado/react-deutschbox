@@ -1,4 +1,4 @@
-# DeustschBox
+# DeutschBox
 
 `<input type="checkbox">` in German style.
 
