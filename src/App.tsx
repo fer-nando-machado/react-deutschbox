@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import DeutschBox from "./DeutschBox";
+import "./App.css";
 
 function App() {
+  const [checked, setChecked] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>DeutschBox</h1>
+      <div>
+        <DeutschBox checked={checked} onChange={setChecked} />
+      </div>
+      <code>{checked.toString()}</code>
     </div>
   );
 }
