@@ -1,6 +1,6 @@
 # DeutschBox
 
-`<input type="checkbox">` in German style.
+A `<input type="checkbox"/>` done in German style.
 
 ## Available Scripts
 
