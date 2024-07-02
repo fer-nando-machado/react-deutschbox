@@ -1,4 +1,4 @@
-# DeutschBox
+# React DeutschBox
 
 A `<input type="checkbox"/>` done in German style.
 

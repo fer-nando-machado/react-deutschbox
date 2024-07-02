@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
-    base: "/deutschbox/",
+    base: "/react-deutschbox/",
     build: {
       outDir: "build",
     },

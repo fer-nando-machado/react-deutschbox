@@ -1,13 +1,13 @@
 {
-  "name": "deutschbox",
+  "name": "react-deutschbox",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "http://fer-nando-machado.github.io/deutschbox",
+  "homepage": "http://fer-nando-machado.github.io/react-deutschbox",
   "author": "Fernando Machado",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fer-nando-machado/deutschbox.git"
+    "url": "git+https://github.com/fer-nando-machado/react-deutschbox.git"
   },
   "private": false,
   "keywords": [
