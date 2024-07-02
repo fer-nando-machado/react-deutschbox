@@ -9,12 +9,14 @@ enum DeutschBoxState {
 }
 
 type DeutschBoxProps = {
+  name?: string;
   checked?: boolean;
   disabled?: boolean;
   onChange?: (checked: boolean) => void;
 };
 
 const DeutschBox: React.FC<DeutschBoxProps> = ({
+  name,
   checked,
   onChange,
   disabled,
@@ -58,6 +60,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
     <>
       <input
         type="checkbox"
+        name={name}
         checked={checked}
         onChange={() => {}}
         style={{ display: "none" }}

@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <h1>DeutschBox</h1>
       <div>
-        <DeutschBox checked={checked} onChange={setChecked} />
+        <DeutschBox name="demo" checked={checked} onChange={setChecked} />
       </div>
       <code>{checked.toString()}</code>
     </div>
