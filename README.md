@@ -12,7 +12,7 @@ Installs project dependencies.
 
 ### `npm start`
 
-Runs the app in the development mode. Open [http://localhost:5173/](http://localhost:5173/) to view it in the browser.
+Runs the app in the development mode.
 
 ### `npm test`
 
@@ -24,11 +24,19 @@ Builds the app for production to the `build` folder.
 
 ### `npm run preview`
 
-Runs the existing `build` in the preview mode. Open [http://localhost:4173/](http://localhost:5173/) to view it in the browser.
+Runs the existing `build` in the preview mode.
 
 ### `npm run deploy`
 
 Publishes static `build` to GitHub Pages using [gh-pages](https://github.com/tschaub/gh-pages). Tutorial available [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f).
+
+### `npm run build:dist`
+
+Builds the package for distribution on the `dist` folder.
+
+### `npm publish`
+
+Publishes `dist` package to npm.
 
 ## React + TypeScript + Vite
 

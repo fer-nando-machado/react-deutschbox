@@ -1,16 +1,34 @@
 {
   "name": "deutschbox",
-  "homepage": "http://fer-nando-machado.github.io/deutschbox",
-  "private": false,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "homepage": "http://fer-nando-machado.github.io/deutschbox",
+  "author": "Fernando Machado",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fer-nando-machado/deutschbox.git"
+  },
+  "private": false,
+  "keywords": [
+    "react",
+    "component",
+    "deutschbox"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/DeutschBox.umd.js",
+  "module": "dist/DeutschBox.es.js",
+  "types": "dist/DeutschBox.d.ts",
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:dist": "tsc -b && vite build --mode dist",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
