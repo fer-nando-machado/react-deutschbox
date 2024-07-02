@@ -42,6 +42,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         newValue = true;
         break;
       case DeutschBoxState.Rechecked:
+        return;
       default:
         newState = DeutschBoxState.Unchecked;
         newValue = false;
