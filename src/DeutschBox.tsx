@@ -50,6 +50,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         type="checkbox"
         name={name}
         checked={checked}
+        onChange={() => {}}
       />
       <span className={`box ${state}`} onClick={handleChange} />
       {feedback && DeutschBoxStateMap[state].label && (
