@@ -13,11 +13,15 @@
 .react-deutschbox .box {
   width: var(--size, 11px);
   height: var(--size, 11px);
-  border: 1px solid gray;
+  border: 1px solid #767676;
   display: inline-block;
   cursor: pointer;
   position: relative;
   border-radius: 2.5px;
+}
+
+.react-deutschbox .box:hover {
+  border-color: #4f4f4f;
 }
 
 .react-deutschbox .box.unchecked,
