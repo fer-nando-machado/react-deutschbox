@@ -11,11 +11,8 @@ export default defineConfig(({ mode }) => {
       plugins: [
         react(),
         cssInjectedByJsPlugin({
-          cssAssetsFilterFunction: function customCssAssetsFilterFunction(
-            outputAsset
-          ) {
-            return outputAsset.fileName == "style.css";
-          },
+          cssAssetsFilterFunction: (outputAsset) =>
+            outputAsset.fileName === "style.css",
         }),
         dts(),
       ],
@@ -24,7 +21,7 @@ export default defineConfig(({ mode }) => {
         lib: {
           entry: path.resolve(__dirname, "src/DeutschBox.tsx"),
           name: "DeutschBox",
-          fileName: (format) => `DeutschBox.${format}.js`,
+          fileName: (format: any) => `DeutschBox.${format}.js`,
           formats: ["es", "umd"],
         },
         rollupOptions: {
