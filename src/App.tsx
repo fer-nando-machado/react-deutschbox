@@ -8,10 +8,12 @@ function App() {
   return (
     <div className="App">
       <h1>DeutschBox</h1>
-      <div>
-        <DeutschBox name="demo" checked={checked} onChange={setChecked} />
-      </div>
-      <code>{checked.toString()}</code>
+      <DeutschBox
+        name="demo"
+        checked={checked}
+        feedback={true}
+        onChange={setChecked}
+      />
     </div>
   );
 }

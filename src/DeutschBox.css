@@ -1,4 +1,8 @@
-.react-deutschbox {
+.react-deutschbox input {
+  display: none !important;
+}
+
+.react-deutschbox .box {
   width: 11px;
   height: 11px;
   border: 1px solid rgb(134, 134, 134);
@@ -8,12 +12,12 @@
   border-radius: 2.5px;
 }
 
-.react-deutschbox.unchecked,
-.react-deutschbox.checked {
+.react-deutschbox .box.unchecked,
+.react-deutschbox .box.checked {
   background-color: white;
 }
 
-.react-deutschbox.checked::after {
+.react-deutschbox .box.checked::after {
   color: #dd0000;
   content: "╳";
   position: absolute;
@@ -24,12 +28,12 @@
   font-weight: bold;
 }
 
-.react-deutschbox.dechecked,
-.react-deutschbox.rechecked {
+.react-deutschbox .box.dechecked,
+.react-deutschbox .box.rechecked {
   background-color: #dd0000;
 }
 
-.react-deutschbox.rechecked::after {
+.react-deutschbox .box.rechecked::after {
   border: 1px solid #dd0000;
   position: absolute;
   content: "";
@@ -39,4 +43,9 @@
   height: 21px;
   border-radius: 50%;
   pointer-events: none;
+}
+
+.react-deutschbox label {
+  position: absolute;
+  
 }

@@ -10,14 +10,16 @@ type DeutschBoxProps = {
   name?: string;
   checked?: boolean;
   disabled?: boolean;
+  feedback?: boolean;
   onChange?: (checked: boolean) => void;
 };
 
 const DeutschBox: React.FC<DeutschBoxProps> = ({
   name,
   checked,
-  onChange,
   disabled,
+  feedback,
+  onChange,
 }) => {
   const [state, setState] = useState<DeutschBoxState>(
     checked ? DeutschBoxState.Checked : DeutschBoxState.Unchecked
@@ -35,16 +37,15 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
   };
 
   return (
-    <span>
+    <span className={"react-deutschbox"}>
       <input
         type="checkbox"
         name={name}
         checked={checked}
         onChange={() => {}}
-        style={{ display: "none" }}
       />
-      <span className={`react-deutschbox ${state}`} onClick={handleChange} />
-      <label> {DeutschBoxStateMap[state].label}</label>
+      <span className={`box ${state}`} onClick={handleChange} />
+      {feedback && <label>{DeutschBoxStateMap[state].label}</label>}
     </span>
   );
 };
