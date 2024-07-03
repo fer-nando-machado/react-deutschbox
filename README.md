@@ -38,7 +38,7 @@ Builds the package for distribution on the `dist` folder.
 
 Publishes `dist` package to [npm](https://www.npmjs.com/package/react-deutschbox).
 
-### Special thanks
+## Special thanks
 
 - [Jos Fabre](https://codepen.io/josfabre)'s CodePen for
   [8-bit pixel speech bubble text balloon](https://codepen.io/josfabre/pen/EBMWwW)

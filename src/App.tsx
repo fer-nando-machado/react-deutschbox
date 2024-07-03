@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DeutschBox from "./DeutschBox";
+import GitHubLogo from "./assets/github.svg";
 import "./App.css";
 
 function App() {
@@ -19,6 +20,12 @@ function App() {
       <h4>
         <code>checked: {checked.toString()}</code>
       </h4>
+      <a
+        href="https://github.com/fer-nando-machado/react-deutschbox"
+        target="_blank"
+      >
+        <img src={GitHubLogo} alt="GitHub" height="24" />
+      </a>
     </div>
   );
 }

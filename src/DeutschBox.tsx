@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./DeutschBox.css";
-import "./BubbleSpeech.scss";
+import "./assets/BubbleSpeech.scss";
 import {
   DeutschBoxState,
   DeutschBoxStateMap,
