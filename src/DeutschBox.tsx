@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./DeutschBox.css";
 import {
   DeutschBoxState,
-  getNextState,
   DeutschBoxStateMap,
+  getNextState,
 } from "./DeutschBoxState";
 
 type DeutschBoxProps = {
