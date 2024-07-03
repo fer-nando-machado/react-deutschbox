@@ -16,6 +16,7 @@ function App() {
         checked={checked}
         feedback={true}
         color="#DD0000"
+        size="50px"
         onChange={setChecked}
       />
       <h4>
@@ -25,7 +26,7 @@ function App() {
         href="https://github.com/fer-nando-machado/react-deutschbox"
         target="_blank"
       >
-        <img src={GitHubLogo} alt="GitHub" height="24" />
+        <img src={GitHubLogo} alt="GitHub" height="25" />
       </a>
     </div>
   );

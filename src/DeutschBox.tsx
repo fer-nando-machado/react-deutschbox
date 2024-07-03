@@ -13,6 +13,7 @@ type DeutschBoxProps = {
   disabled?: boolean;
   feedback?: boolean;
   color?: string;
+  size?: string;
   onChange?: (checked: boolean) => void;
 };
 
@@ -22,6 +23,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
   disabled,
   feedback,
   color,
+  size,
   onChange,
 }) => {
   const [state, setState] = useState<DeutschBoxState>(
@@ -42,13 +44,12 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
   return (
     <span
       className={"react-deutschbox"}
-      style={{ "--color": color } as React.CSSProperties}
+      style={{ "--color": color, "--size": size } as React.CSSProperties}
     >
       <input
         type="checkbox"
         name={name}
         checked={checked}
-        onChange={() => {}}
       />
       <span className={`box ${state}`} onClick={handleChange} />
       {feedback && DeutschBoxStateMap[state].label && (

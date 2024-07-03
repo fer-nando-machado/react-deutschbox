@@ -11,8 +11,8 @@
 }
 
 .react-deutschbox .box {
-  width: 11px;
-  height: 11px;
+  width: var(--size, 11px);
+  height: var(--size, 11px);
   border: 1px solid gray;
   display: inline-block;
   cursor: pointer;
@@ -28,12 +28,14 @@
 .react-deutschbox .box.checked::after {
   color: var(--color, Highlight);
   -webkit-text-stroke: 1px var(--color, Highlight);
+  font-size: var(--size, 11px);
+  margin-top: calc(var(--size, 11px) / -25);
+  font-weight: bold;
   content: "╳";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 11px;
 }
 
 .react-deutschbox .box.dechecked,
@@ -42,18 +44,19 @@
 }
 
 .react-deutschbox .box.rechecked::after {
-  border: 1px solid var(--color, Highlight);
-  position: absolute;
+  border: calc(var(--size, 11px) / 10) solid var(--color, Highlight);
   content: "";
-  top: -6px;
-  left: -6px;
-  width: 21px;
-  height: 21px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(1.5 * var(--size, 11px));
+  height: calc(1.5 * var(--size, 11px));
   border-radius: 50%;
   pointer-events: none;
 }
 
 .react-deutschbox label {
-  left: 30px;
-  top: -2px;
+  left: calc(25px + var(--size, 11px));
+  top: 0;
 }
