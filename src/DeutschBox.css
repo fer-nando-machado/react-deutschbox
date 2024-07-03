@@ -1,4 +1,4 @@
-.DeutschBox {
+.react-deutschbox {
   width: 11px;
   height: 11px;
   border: 1px solid rgb(134, 134, 134);
@@ -8,12 +8,12 @@
   border-radius: 2.5px;
 }
 
-.DeutschBox.Unchecked,
-.DeutschBox.Checked {
+.react-deutschbox.unchecked,
+.react-deutschbox.checked {
   background-color: white;
 }
 
-.DeutschBox.Checked::after {
+.react-deutschbox.checked::after {
   color: #dd0000;
   content: "╳";
   position: absolute;
@@ -24,12 +24,12 @@
   font-weight: bold;
 }
 
-.DeutschBox.Dechecked,
-.DeutschBox.Rechecked {
+.react-deutschbox.dechecked,
+.react-deutschbox.rechecked {
   background-color: #dd0000;
 }
 
-.DeutschBox.Rechecked::after {
+.react-deutschbox.rechecked::after {
   border: 1px solid #dd0000;
   position: absolute;
   content: "";

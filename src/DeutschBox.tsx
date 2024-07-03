@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./DeutschBox.css";
 
 enum DeutschBoxState {
-  Unchecked = "Unchecked",
-  Checked = "Checked",
-  Dechecked = "Dechecked",
-  Rechecked = "Rechecked",
+  Unchecked = "unchecked",
+  Checked = "checked",
+  Dechecked = "dechecked",
+  Rechecked = "rechecked",
 }
 
 type DeutschBoxProps = {
@@ -64,7 +64,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         onChange={() => {}}
         style={{ display: "none" }}
       />
-      <span className={`DeutschBox ${state}`} onClick={handleChange} />
+      <span className={`react-deutschbox ${state}`} onClick={handleChange} />
     </>
   );
 };
