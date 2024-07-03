@@ -65,7 +65,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         onChange={() => {}}
         style={{ display: "none" }}
       />
-      <div className={`DeutschBox ${state}`} onClick={handleChange} />
+      <span className={`DeutschBox ${state}`} onClick={handleChange} />
     </>
   );
 };
