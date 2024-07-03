@@ -34,7 +34,7 @@ Publishes static `build` to GitHub Pages using [gh-pages](https://github.com/tsc
 
 Builds the package for distribution on the `dist` folder.
 
-### `npm run publish`
+### `npm publish`
 
 Publishes `dist` package to [npm](https://www.npmjs.com/package/react-deutschbox).
 

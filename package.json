@@ -1,6 +1,6 @@
 {
   "name": "react-deutschbox",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "type": "module",
   "homepage": "http://fer-nando-machado.github.io/react-deutschbox",
   "author": "Fernando Machado",
@@ -29,7 +29,6 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "publish": "npm publish",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
