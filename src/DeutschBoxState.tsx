@@ -32,10 +32,8 @@ export const DeutschBoxStateMap: Record<
   },
 };
 
-export const getNextState = (
-  currentState: DeutschBoxState
-): DeutschBoxState => {
-  switch (currentState) {
+export const getNextState = (current: DeutschBoxState): DeutschBoxState => {
+  switch (current) {
     case DeutschBoxState.Unchecked:
       return DeutschBoxState.Checked;
     case DeutschBoxState.Checked:
