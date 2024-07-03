@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./DeutschBox.css";
+import "./BubbleSpeech.scss";
 import {
   DeutschBoxState,
   DeutschBoxStateMap,
@@ -45,7 +46,11 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         onChange={() => {}}
       />
       <span className={`box ${state}`} onClick={handleChange} />
-      {feedback && <label>{DeutschBoxStateMap[state].label}</label>}
+      {feedback && DeutschBoxStateMap[state].label && (
+        <label className="bubble-speech shadow left">
+          {DeutschBoxStateMap[state].label}
+        </label>
+      )}
     </span>
   );
 };

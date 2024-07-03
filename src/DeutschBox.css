@@ -1,3 +1,7 @@
+.react-deutschbox {
+  position: relative;
+}
+
 .react-deutschbox input {
   display: none !important;
 }
@@ -46,6 +50,6 @@
 }
 
 .react-deutschbox label {
-  position: absolute;
-  
+  left: 30px;
+  top: -2px;
 }

@@ -1,0 +1,84 @@
+// adapted from https://codepen.io/josfabre/pen/EBMWwW
+
+$black: #000;
+$white: #fff;
+$shadow: rgba(0, 0, 0, 0.1);
+
+$px: 2px;
+
+$bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
+  $px -1 * $px $black, 2 * $px 0 $black, 0 $px $white, 0 2 * $px $black,
+  -1 * $px 0 $white, -1 * $px $px $black, -2 * $px 0 $black,
+  -1 * $px -1 * $px $black, $px $px $black;
+
+.bubble-speech {
+  position: absolute;
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  background-color: $white;
+  color: $black;
+  padding: 2.5 * $px;
+  box-shadow: $bubble-border;
+  width: initial;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  &.shadow {
+    box-shadow: $bubble-border, $px 3 * $px $shadow, 3 * $px $px $shadow,
+      2 * $px 2 * $px $shadow;
+  }
+
+  &.top::after {
+    height: $px;
+    width: $px;
+    top: -2 * $px;
+    left: 8 * $px;
+    box-shadow: 0 -1 * $px $black, 0 -2 * $px $black, 0 -3 * $px $black,
+      0 -4 * $px $black, -1 * $px -3 * $px $black, -2 * $px -2 * $px $black,
+      -3 * $px -1 * $px $black, -1 * $px -1 * $px $white,
+      -2 * $px -1 * $px $white, -1 * $px -2 * $px $white, -1 * $px 0 $white,
+      -2 * $px 0 $white, -3 * $px 0 $white;
+  }
+
+  &.right::after {
+    height: $px;
+    width: $px;
+    top: 21 * $px;
+    right: -2 * $px;
+    background: white;
+    box-shadow: 1 * $px -1 * $px $white, 1 * $px 0 $white, 2 * $px 0 $white,
+      0 -2 * $px $white, 1 * $px 1 * $px $black, 2 * $px 1 * $px $black,
+      3 * $px 1 * $px $black, 4 * $px 1 * $px $black, 3 * $px 0 $black,
+      2 * $px -1 * $px $black, 1 * $px -2 * $px $black, 0 -1 * $px $white;
+  }
+
+  &.bottom::after {
+    height: $px;
+    width: $px;
+    bottom: -2 * $px;
+    left: 8 * $px;
+    box-shadow: 0 $px $black, 0 2 * $px $black, 0 3 * $px $black,
+      0 4 * $px $black, -1 * $px 3 * $px $black, -2 * $px 2 * $px $black,
+      -3 * $px 1 * $px $black, -1 * $px $px $white, -2 * $px $px $white,
+      -1 * $px 2 * $px $white, -1 * $px 0 $white, -2 * $px 0 $white,
+      -3 * $px 0 $white;
+  }
+
+  &.left::after {
+    height: $px;
+    width: $px;
+    top: 5 * $px;
+    left: -2 * $px;
+    background: white;
+    box-shadow: -1 * $px -1 * $px $white, -1 * $px 0 $white, -2 * $px 0 $white,
+      0 -2 * $px $white, -1 * $px 1 * $px $black, -2 * $px 1 * $px $black,
+      -3 * $px 1 * $px $black, -4 * $px 1 * $px $black, -3 * $px 0 $black,
+      -2 * $px -1 * $px $black, -1 * $px -2 * $px $black, 0 -1 * $px $white;
+  }
+}
