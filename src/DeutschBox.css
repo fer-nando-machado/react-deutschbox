@@ -44,7 +44,7 @@
 }
 
 .react-deutschbox .box.rechecked::after {
-  border: calc(var(--size, 11px) / 10) solid var(--color, Highlight);
+  border: calc(var(--size, 11px) / 11) solid var(--color, Highlight);
   content: "";
   position: absolute;
   top: 50%;
@@ -58,5 +58,5 @@
 
 .react-deutschbox label {
   left: calc(25px + var(--size, 11px));
-  top: 0;
+  bottom: calc(var(--size, 11px) * 0.5 - 7px);
 }
