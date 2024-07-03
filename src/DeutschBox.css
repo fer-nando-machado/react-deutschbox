@@ -13,7 +13,7 @@
 .react-deutschbox .box {
   width: 11px;
   height: 11px;
-  border: 1px solid rgb(134, 134, 134);
+  border: 1px solid gray;
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -26,23 +26,23 @@
 }
 
 .react-deutschbox .box.checked::after {
-  color: #dd0000;
+  color: var(--color, Highlight);
+  -webkit-text-stroke: 1px var(--color, Highlight);
   content: "╳";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 11px;
-  font-weight: bold;
 }
 
 .react-deutschbox .box.dechecked,
 .react-deutschbox .box.rechecked {
-  background-color: #dd0000;
+  background-color: var(--color, Highlight);
 }
 
 .react-deutschbox .box.rechecked::after {
-  border: 1px solid #dd0000;
+  border: 1px solid var(--color, Highlight);
   position: absolute;
   content: "";
   top: -6px;

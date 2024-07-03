@@ -15,6 +15,7 @@ function App() {
         name="demo"
         checked={checked}
         feedback={true}
+        color="#DD0000"
         onChange={setChecked}
       />
       <h4>
