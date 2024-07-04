@@ -7,15 +7,13 @@
 }
 
 .react-deutschbox button {
+  position: relative;
   width: var(--size, 13px);
   height: var(--size, 13px);
-  border: 1px solid #767676;
-  display: inline-block;
-  position: relative;
-  border-radius: 2.5px;
-  box-sizing: border-box;
-  padding: 0px;
   margin: calc(var(--size, 13px) * 0.25);
+  border: 1px solid #767676;
+  border-radius: 2.5px;
+  padding: 0;
 }
 
 .react-deutschbox button:disabled {
@@ -33,12 +31,12 @@
 }
 
 .react-deutschbox button.checked::after {
+  position: absolute;
   color: var(--color, Highlight);
   -webkit-text-stroke: 1px var(--color, Highlight);
   font-weight: bold;
   font-size: var(--size, 13px);
   content: "╳";
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -50,9 +48,11 @@
 }
 
 .react-deutschbox button.rechecked::after {
-  border: calc(var(--size, 13px) / 13) solid var(--color, Highlight);
-  content: "";
   position: absolute;
+  border-width: calc(var(--size, 13px) / 13);
+  border-style: solid;
+  border-color: var(--color, Highlight);
+  content: "";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -64,7 +64,8 @@
 }
 
 .react-deutschbox label {
-  left: calc(var(--size, 13px) + 20px);
-  bottom: calc(var(--size, 13px) * 0.5);
+  left: calc(var(--size, 13px) + 13px);
+  bottom: calc(var(--size, 13px) * 0.5 - 13px);
+  margin: calc(var(--size, 13px) * 0.25);
   z-index: 2;
 }

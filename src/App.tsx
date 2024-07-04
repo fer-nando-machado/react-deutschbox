@@ -15,10 +15,10 @@ function App() {
       </h1>
       <DeutschBox
         name="demo"
-        checked={checked}
-        feedback={true}
+        feedback
         color="#DD0000"
-        size="50px"
+        size="75px"
+        checked={checked}
         onChange={setChecked}
       />
       <h4>

@@ -20,7 +20,6 @@ $bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
   color: $black;
   padding: 2.5 * $px;
   box-shadow: $bubble-border;
-  width: initial;
   text-transform: uppercase;
 
   &::after {
