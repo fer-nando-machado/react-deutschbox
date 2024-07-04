@@ -31,11 +31,8 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
   );
 
   const handleChange = () => {
-    if (disabled) return;
-
     const nextState: DeutschBoxState = getNextState(state);
     setState(nextState);
-
     if (onChange) {
       onChange(DeutschBoxStateMap[nextState].value);
     }
@@ -50,9 +47,15 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         type="checkbox"
         name={name}
         checked={checked}
+        disabled={disabled}
         onChange={() => {}}
+        hidden
       />
-      <span className={`box ${state}`} onClick={handleChange} />
+      <button
+        className={`${state}`}
+        disabled={disabled}
+        onClick={handleChange}
+      />
       {feedback && DeutschBoxStateMap[state].label && (
         <label className="bubble-speech shadow left">
           {DeutschBoxStateMap[state].label}

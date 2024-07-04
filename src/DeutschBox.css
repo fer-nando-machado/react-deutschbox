@@ -6,11 +6,7 @@
   -ms-user-select: none;
 }
 
-.react-deutschbox input {
-  display: none !important;
-}
-
-.react-deutschbox .box {
+.react-deutschbox button {
   width: var(--size, 11px);
   height: var(--size, 11px);
   border: 1px solid #767676;
@@ -20,16 +16,20 @@
   border-radius: 2.5px;
 }
 
-.react-deutschbox .box:hover {
+.react-deutschbox button:hover {
   border-color: #4f4f4f;
 }
 
-.react-deutschbox .box.unchecked,
-.react-deutschbox .box.checked {
+.react-deutschbox button:disabled {
+  opacity: 0.4;
+}
+
+.react-deutschbox button.unchecked,
+.react-deutschbox button.checked {
   background-color: white;
 }
 
-.react-deutschbox .box.checked::after {
+.react-deutschbox button.checked::after {
   color: var(--color, Highlight);
   -webkit-text-stroke: 1px var(--color, Highlight);
   font-size: var(--size, 11px);
@@ -42,12 +42,12 @@
   transform: translate(-50%, -50%);
 }
 
-.react-deutschbox .box.dechecked,
-.react-deutschbox .box.rechecked {
+.react-deutschbox button.dechecked,
+.react-deutschbox button.rechecked {
   background-color: var(--color, Highlight);
 }
 
-.react-deutschbox .box.rechecked::after {
+.react-deutschbox button.rechecked::after {
   border: calc(var(--size, 11px) / 11) solid var(--color, Highlight);
   content: "";
   position: absolute;
