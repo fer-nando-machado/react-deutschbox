@@ -39,6 +39,7 @@ export const getNextState = (current: DeutschBoxState): DeutschBoxState => {
     case DeutschBoxState.Dechecked:
       return DeutschBoxState.Rechecked;
     case DeutschBoxState.Rechecked:
+      return DeutschBoxState.Rechecked;
     default:
       return DeutschBoxState.Unchecked;
   }
