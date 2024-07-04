@@ -4,7 +4,7 @@ import GitHubLogo from "./assets/github.svg";
 import "./App.css";
 
 function App() {
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState(false);
 
   return (
     <div className="App">
@@ -16,33 +16,9 @@ function App() {
         checked={checked}
         feedback={true}
         color="#DD0000"
+        size="50px"
         onChange={setChecked}
       />
-      <br />
-      <DeutschBox
-        name="demo"
-        checked={true}
-        feedback={true}
-        size="50px"
-        color="green"
-      />
-            <br />
-      <DeutschBox
-        name="demo"
-        checked={true}
-        feedback={true}
-        size="150px"
-        color="purple"
-      />
-      <br />
-      <DeutschBox
-        name="disabled-box-demo"
-        feedback={true}
-        checked={true}
-        size="150px"
-        disabled={true}
-      />
-
       <h4>
         <code>checked: {checked.toString()}</code>
       </h4>
