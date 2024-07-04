@@ -8,3 +8,10 @@
   justify-content: center;
   color: #000000;
 }
+
+.App .external {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}

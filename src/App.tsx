@@ -1,6 +1,8 @@
 import { useState } from "react";
 import DeutschBox from "./DeutschBox";
 import GitHubLogo from "./assets/github.svg";
+import NPMLogo from "./assets/npm.svg";
+
 import "./App.css";
 
 function App() {
@@ -22,12 +24,20 @@ function App() {
       <h4>
         <code>checked: {checked.toString()}</code>
       </h4>
-      <a
-        href="https://github.com/fer-nando-machado/react-deutschbox"
-        target="_blank"
-      >
-        <img src={GitHubLogo} alt="GitHub" height="25" />
-      </a>
+      <div className="external">
+        <a
+          href="https://github.com/fer-nando-machado/react-deutschbox"
+          target="_blank"
+        >
+          <img src={GitHubLogo} alt="react-deutschbox @ GitHub" height="25" />
+        </a>
+        <a
+          href="https://www.npmjs.com/package/react-deutschbox"
+          target="_blank"
+        >
+          <img src={NPMLogo} alt="react-deutschbox @ npm" height="18" />
+        </a>
+      </div>
     </div>
   );
 }
