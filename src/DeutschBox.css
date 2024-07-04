@@ -37,7 +37,6 @@
   -webkit-text-stroke: 1px var(--color, Highlight);
   font-weight: bold;
   font-size: var(--size, 13px);
-  margin-top: calc(var(--size, 13px) / -25);
   content: "╳";
   position: absolute;
   top: 50%;
@@ -66,6 +65,6 @@
 
 .react-deutschbox label {
   left: calc(var(--size, 13px) + 20px);
-  top: 0;
+  bottom: calc(var(--size, 13px) * 0.5);
   z-index: 2;
 }
