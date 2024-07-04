@@ -7,21 +7,24 @@
 }
 
 .react-deutschbox button {
-  width: var(--size, 11px);
-  height: var(--size, 11px);
+  width: var(--size, 13px);
+  height: var(--size, 13px);
   border: 1px solid #767676;
   display: inline-block;
-  cursor: pointer;
   position: relative;
   border-radius: 2.5px;
-}
-
-.react-deutschbox button:hover {
-  border-color: #4f4f4f;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 3px;
 }
 
 .react-deutschbox button:disabled {
-  opacity: 0.4;
+  opacity: 0.5;
+}
+
+.react-deutschbox button:hover:not(:disabled) {
+  border-color: #4f4f4f;
+  cursor: pointer;
 }
 
 .react-deutschbox button.unchecked,
@@ -32,9 +35,9 @@
 .react-deutschbox button.checked::after {
   color: var(--color, Highlight);
   -webkit-text-stroke: 1px var(--color, Highlight);
-  font-size: var(--size, 11px);
-  margin-top: calc(var(--size, 11px) / -25);
   font-weight: bold;
+  font-size: var(--size, 13px);
+  margin-top: calc(var(--size, 13px) / -25);
   content: "╳";
   position: absolute;
   top: 50%;
@@ -48,19 +51,21 @@
 }
 
 .react-deutschbox button.rechecked::after {
-  border: calc(var(--size, 11px) / 11) solid var(--color, Highlight);
+  border: calc(var(--size, 13px) / 13) solid var(--color, Highlight);
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(1.5 * var(--size, 11px));
-  height: calc(1.5 * var(--size, 11px));
+  width: calc(1.5 * var(--size, 13px));
+  height: calc(1.5 * var(--size, 13px));
   border-radius: 50%;
   pointer-events: none;
+  z-index: 1;
 }
 
 .react-deutschbox label {
-  left: calc(25px + var(--size, 11px));
-  bottom: calc(var(--size, 11px) * 0.5 - 7px);
+  left: calc(var(--size, 13px) + 20px);
+  top: 0;
+  z-index: 2;
 }

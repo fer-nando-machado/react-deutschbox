@@ -45,18 +45,18 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
     >
       <input
         type="checkbox"
+        hidden
         name={name}
         checked={checked}
         disabled={disabled}
         onChange={() => {}}
-        hidden
       />
       <button
         className={`${state}`}
         disabled={disabled}
         onClick={handleChange}
       />
-      {feedback && DeutschBoxStateMap[state].label && (
+      {!disabled && feedback && DeutschBoxStateMap[state].label && (
         <label className="bubble-speech shadow left">
           {DeutschBoxStateMap[state].label}
         </label>
