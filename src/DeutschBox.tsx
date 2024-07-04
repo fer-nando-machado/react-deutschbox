@@ -56,7 +56,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         disabled={disabled}
         onClick={handleChange}
       />
-      {!disabled && feedback && DeutschBoxStateMap[state].label && (
+      {feedback && DeutschBoxStateMap[state].label && (
         <label className="bubble-speech shadow left">
           {DeutschBoxStateMap[state].label}
         </label>
