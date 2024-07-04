@@ -28,7 +28,7 @@ describe("DeutschBoxStateMap", () => {
     });
   });
 
-  it("should verify settings for  Rechecked", () => {
+  it("should verify settings for Rechecked", () => {
     expect(DeutschBoxStateMap[DeutschBoxState.Rechecked]).toEqual({
       label: "doch!",
       value: true,
