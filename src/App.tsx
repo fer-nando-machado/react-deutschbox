@@ -29,11 +29,11 @@ function App() {
           </code>
         </div>
         <DeutschBox
-          color="#DD0000"
           checked={checked}
           onChange={onChange}
           size={75}
-          feedback
+          color="#DD0000"
+          feedback={true}
         />
       </div>
       <textarea
@@ -47,7 +47,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   checked={checked}
   onChange={onChange}
   size={75} color="#DD0000" 
-  feedback
+  feedback={true}
 />`}
         spellCheck={false}
       />
@@ -64,8 +64,8 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
           name="demo-name"
           ref={ref}
           checked={true}
-          disabled={false}
           size={75}
+          feedback={false}
           readOnly
         />
       </div>
@@ -78,10 +78,10 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   name="demo-name"
   ref={ref}
   checked={true}
-  disabled={false}
   size={75}
+  feedback={false}
   readOnly
-  />`}
+/>`}
         spellCheck={false}
       />
 
