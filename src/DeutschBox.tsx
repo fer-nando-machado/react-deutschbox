@@ -13,12 +13,11 @@ interface DeutschBoxProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 
 const DeutschBox: React.FC<DeutschBoxProps> = ({
-  name,
+  feedback,
   checked,
   disabled,
-  feedback,
-  color = "Highlight",
   size = 13,
+  color = "Highlight",
   onChange,
   ...props
 }) => {
@@ -50,6 +49,7 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         hidden
         checked={DeutschBoxStateMap[state].value}
         //ref={ref}
+        disabled={disabled}
         onChange={onChange}
         {...props}
       />
