@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./DeutschBox.css";
-import "./assets/BubbleSpeech.scss";
+import "./DeutschBox.scss";
 import {
   DeutschBoxState,
   DeutschBoxStateMap,
   getNextState,
 } from "./DeutschBoxState";
+import BubbleLabel from "./BubbleLabel";
 
 type DeutschBoxProps = {
   name?: string;
@@ -38,11 +38,13 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
     }
   };
 
+  const style = {
+    "--color": color,
+    "--size": size,
+  } as React.CSSProperties;
+
   return (
-    <span
-      className={"react-deutschbox"}
-      style={{ "--color": color, "--size": size } as React.CSSProperties}
-    >
+    <span className={"react-deutschbox"} style={style}>
       <input
         type="checkbox"
         hidden
@@ -57,9 +59,9 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
         onClick={handleChange}
       />
       {feedback && DeutschBoxStateMap[state].label && (
-        <label className="bubble-speech shadow left">
+        <BubbleLabel shadow direction="left">
           {DeutschBoxStateMap[state].label}
-        </label>
+        </BubbleLabel>
       )}
     </span>
   );

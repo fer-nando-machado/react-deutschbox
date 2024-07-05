@@ -1,0 +1,75 @@
+$size: var(--size, 13px);
+$color: var(--color, Highlight);
+
+.react-deutschbox {
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.react-deutschbox button {
+  position: relative;
+  width: $size;
+  height: $size;
+  margin: calc(0.25 * $size);
+  border: 1px solid #767676;
+  border-radius: 2.5px;
+  padding: 0;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  &:hover:not(:disabled) {
+    border-color: #4f4f4f;
+    cursor: pointer;
+  }
+
+  &.unchecked,
+  &.checked {
+    background-color: white;
+  }
+
+  &.checked::after {
+    position: absolute;
+    color: $color;
+    -webkit-text-stroke: 1px $color;
+    font-weight: bold;
+    font-size: $size;
+    content: "╳";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.dechecked,
+  &.rechecked {
+    background-color: $color;
+  }
+
+  &.rechecked::after {
+    position: absolute;
+    border-width: calc($size / 13);
+    border-style: solid;
+    border-color: $color;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(1.5 * $size);
+    height: calc(1.5 * $size);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+
+.react-deutschbox label {
+  position: absolute;
+  left: calc($size + 13px);
+  bottom: calc($size * 0.5 - 13px); /* a bit buggy when inside a div */
+  margin: calc($size * 0.25);
+  z-index: 2;
+}
