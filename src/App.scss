@@ -10,7 +10,8 @@
 
   .example {
     display: flex;
-    width: 500px;
+    width: 80vw;
+    max-width: 500px;
     margin: 18px;
 
     .description {
@@ -23,7 +24,8 @@
   }
 
   textarea {
-    width: 500px;
+    width: 80vw;
+    max-width: 500px;
     padding: 18px;
     height: 170px;
     resize: none;
