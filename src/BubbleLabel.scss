@@ -1,26 +1,26 @@
-// adapted from https://codepen.io/josfabre/pen/EBMWwW
-
-$black: #000;
-$white: #fff;
+$black: black;
+$white: white;
 $shadow: rgba(0, 0, 0, 0.1);
 
 $px: 2px;
 
-$bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
-  $px -1 * $px $black, 2 * $px 0 $black, 0 $px $white, 0 2 * $px $black,
-  -1 * $px 0 $white, -1 * $px $px $black, -2 * $px 0 $black,
-  -1 * $px -1 * $px $black, $px $px $black;
+$border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white, $px -1 * $px $black,
+  2 * $px 0 $black, 0 $px $white, 0 2 * $px $black, -1 * $px 0 $white,
+  -1 * $px $px $black, -2 * $px 0 $black, -1 * $px -1 * $px $black,
+  $px $px $black;
 
-.bubble-speech {
-  position: absolute;
+.bubble-label {
+  position: relative;
+  display: inline-block;
   font-family: "Press Start 2P", cursive;
   font-size: 14px;
   font-weight: bold;
+  text-transform: uppercase;
   background-color: $white;
   color: $black;
+  margin: 5 * $px;
   padding: 2.5 * $px;
-  box-shadow: $bubble-border;
-  text-transform: uppercase;
+  box-shadow: $border;
 
   &::after {
     content: "";
@@ -30,15 +30,17 @@ $bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
   }
 
   &.shadow {
-    box-shadow: $bubble-border, $px 3 * $px $shadow, 3 * $px $px $shadow,
+    box-shadow: $border, $px 3 * $px $shadow, 3 * $px $px $shadow,
       2 * $px 2 * $px $shadow;
   }
 
-  &.top::after {
+  &.top:after {
     height: $px;
     width: $px;
     top: -2 * $px;
     left: 8 * $px;
+    background: $white;
+
     box-shadow: 0 -1 * $px $black, 0 -2 * $px $black, 0 -3 * $px $black,
       0 -4 * $px $black, -1 * $px -3 * $px $black, -2 * $px -2 * $px $black,
       -3 * $px -1 * $px $black, -1 * $px -1 * $px $white,
@@ -46,23 +48,12 @@ $bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
       -2 * $px 0 $white, -3 * $px 0 $white;
   }
 
-  &.right::after {
-    height: $px;
-    width: $px;
-    top: 21 * $px;
-    right: -2 * $px;
-    background: white;
-    box-shadow: 1 * $px -1 * $px $white, 1 * $px 0 $white, 2 * $px 0 $white,
-      0 -2 * $px $white, 1 * $px 1 * $px $black, 2 * $px 1 * $px $black,
-      3 * $px 1 * $px $black, 4 * $px 1 * $px $black, 3 * $px 0 $black,
-      2 * $px -1 * $px $black, 1 * $px -2 * $px $black, 0 -1 * $px $white;
-  }
-
-  &.bottom::after {
+  &.bottom:after {
     height: $px;
     width: $px;
     bottom: -2 * $px;
     left: 8 * $px;
+    background: $white;
     box-shadow: 0 $px $black, 0 2 * $px $black, 0 3 * $px $black,
       0 4 * $px $black, -1 * $px 3 * $px $black, -2 * $px 2 * $px $black,
       -3 * $px 1 * $px $black, -1 * $px $px $white, -2 * $px $px $white,
@@ -70,15 +61,27 @@ $bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
       -3 * $px 0 $white;
   }
 
-  &.left::after {
+  &.left:after {
     height: $px;
     width: $px;
     top: 5 * $px;
     left: -2 * $px;
-    background: white;
+    background: $white;
     box-shadow: -1 * $px -1 * $px $white, -1 * $px 0 $white, -2 * $px 0 $white,
       0 -2 * $px $white, -1 * $px 1 * $px $black, -2 * $px 1 * $px $black,
       -3 * $px 1 * $px $black, -4 * $px 1 * $px $black, -3 * $px 0 $black,
       -2 * $px -1 * $px $black, -1 * $px -2 * $px $black, 0 -1 * $px $white;
+  }
+
+  &.right:after {
+    height: $px;
+    width: $px;
+    top: 5 * $px;
+    right: -2 * $px;
+    background: $white;
+    box-shadow: 1 * $px -1 * $px $white, 1 * $px 0 $white, 2 * $px 0 $white,
+      0 -2 * $px $white, 1 * $px 1 * $px $black, 2 * $px 1 * $px $black,
+      3 * $px 1 * $px $black, 4 * $px 1 * $px $black, 3 * $px 0 $black,
+      2 * $px -1 * $px $black, 1 * $px -2 * $px $black, 0 -1 * $px $white;
   }
 }

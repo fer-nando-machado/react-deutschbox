@@ -40,7 +40,7 @@ Publishes `dist` package to [npm](https://www.npmjs.com/package/react-deutschbox
 
 ## Dependencies
 
-If you are importing this npm package, make sure your load the required `Press Start 2P` on your app so you can view the amazing [8-bit pixel speech bubble text balloon](https://codepen.io/josfabre/pen/EBMWwW) the way [Jos Fabre](https://codepen.io/josfabre) intented.
+Optionally, when importing this npm package, you can link the [`Press Start 2P`](https://fonts.google.com/specimen/Press+Start+2P) font to view it on your app.
 
 ```html
 <link
