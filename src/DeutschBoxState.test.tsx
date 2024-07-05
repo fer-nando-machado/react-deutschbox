@@ -55,9 +55,16 @@ describe("getNextState", () => {
     );
   });
 
-  it("should stay Rechecked", () => {
+  // TODO disable cycle feature
+  //it("should stay Rechecked", () => {
+  //  expect(getNextState(DeutschBoxState.Rechecked)).toBe(
+  //    DeutschBoxState.Rechecked
+  //  );
+  //});
+
+  it("should go from Rechecked to Unchecked", () => {
     expect(getNextState(DeutschBoxState.Rechecked)).toBe(
-      DeutschBoxState.Rechecked
+      DeutschBoxState.Unchecked
     );
   });
 

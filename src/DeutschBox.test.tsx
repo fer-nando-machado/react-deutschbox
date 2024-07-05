@@ -53,11 +53,19 @@ describe("DeutschBox", () => {
       target: { checked: true },
     });
 
+    // TODO disable cycle feature
+    // fireEvent.click(button);
+    // expect(checkbox).toBeChecked();
+    // expect(onChangeMock).toHaveBeenCalledTimes(3);
+    // expect(onChangeMock).toHaveBeenLastCalledWith({
+    //   target: { checked: true },
+    // });
+
     fireEvent.click(button);
-    expect(checkbox).toBeChecked();
-    expect(onChangeMock).toHaveBeenCalledTimes(3);
+    expect(checkbox).not.toBeChecked();
+    expect(onChangeMock).toHaveBeenCalledTimes(4);
     expect(onChangeMock).toHaveBeenLastCalledWith({
-      target: { checked: true },
+      target: { checked: false },
     });
   });
 
