@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { InputHTMLAttributes, useState } from "react";
 import "./DeutschBox.scss";
 import {
   DeutschBoxState,
@@ -7,40 +7,40 @@ import {
 } from "./DeutschBoxState";
 import BubbleLabel from "./BubbleLabel";
 
-type DeutschBoxProps = {
-  name?: string;
-  checked?: boolean;
-  disabled?: boolean;
+interface DeutschBoxProps extends InputHTMLAttributes<HTMLInputElement> {
   feedback?: boolean;
-  color?: string;
-  size?: string;
-  onChange?: (checked: boolean) => void;
-};
+  //ref?: any;
+}
 
 const DeutschBox: React.FC<DeutschBoxProps> = ({
   name,
   checked,
   disabled,
   feedback,
-  color,
-  size,
+  color = "Highlight",
+  size = 13,
   onChange,
+  ...props
 }) => {
   const [state, setState] = useState<DeutschBoxState>(
     checked ? DeutschBoxState.Checked : DeutschBoxState.Unchecked
   );
 
-  const handleChange = () => {
+  const handleClick = () => {
+    if (disabled) return;
+
     const nextState: DeutschBoxState = getNextState(state);
+    if (nextState === state) return;
     setState(nextState);
-    if (onChange) {
-      onChange(DeutschBoxStateMap[nextState].value);
-    }
+
+    if (!onChange) return;
+    const event = createEvent(DeutschBoxStateMap[nextState].value);
+    onChange(event);
   };
 
-  const style = {
+  const style: React.CSSProperties = {
     "--color": color,
-    "--size": size,
+    "--size": `${size}px`,
   } as React.CSSProperties;
 
   return (
@@ -48,23 +48,23 @@ const DeutschBox: React.FC<DeutschBoxProps> = ({
       <input
         type="checkbox"
         hidden
-        name={name}
-        checked={checked}
-        disabled={disabled}
-        onChange={() => {}}
+        checked={DeutschBoxStateMap[state].value}
+        //ref={ref}
+        onChange={onChange}
+        {...props}
       />
-      <button
-        className={`${state}`}
-        disabled={disabled}
-        onClick={handleChange}
-      />
+      <button className={state} disabled={disabled} onClick={handleClick} />
       {feedback && DeutschBoxStateMap[state].label && (
-        <BubbleLabel shadow direction="left">
+        <BubbleLabel direction="left" shadow>
           {DeutschBoxStateMap[state].label}
         </BubbleLabel>
       )}
     </span>
   );
 };
+
+export function createEvent(checked: boolean) {
+  return { target: { checked } } as React.ChangeEvent<HTMLInputElement>;
+}
 
 export default DeutschBox;
