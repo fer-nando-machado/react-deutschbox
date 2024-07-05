@@ -58,7 +58,7 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
         />
         <button className={state} disabled={disabled} onClick={handleClick} />
         {feedback && DeutschBoxStateMap[state].label && (
-          <BubbleLabel direction="left" shadow>
+          <BubbleLabel direction="right" shadow>
             {DeutschBoxStateMap[state].label}
           </BubbleLabel>
         )}

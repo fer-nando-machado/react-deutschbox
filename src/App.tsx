@@ -28,10 +28,17 @@ function App() {
             checked: <b>{checked.toString()}</b>
           </code>
         </div>
-        <DeutschBox checked={checked} onChange={onChange} size={75} feedback />
+        <DeutschBox
+          color="#DD0000"
+          checked={checked}
+          onChange={onChange}
+          size={75}
+          feedback
+        />
       </div>
-      <textarea spellCheck={false}>
-        {`const [checked, setChecked] = useState(false);
+      <textarea
+        readOnly
+        value={`const [checked, setChecked] = useState(false);
 const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   setChecked(event.target.checked);
 };
@@ -39,10 +46,11 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 <DeutschBox
   checked={checked}
   onChange={onChange}
-  size={75}
+  size={75} color="#DD0000" 
   feedback
 />`}
-      </textarea>
+        spellCheck={false}
+      />
 
       <div className="example">
         <div className="description">
@@ -56,24 +64,26 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
           name="demo-name"
           ref={ref}
           checked={true}
-          color="#DD0000"
+          disabled={false}
           size={75}
           readOnly
         />
       </div>
-      <textarea spellCheck={false}>
-        {`const ref = useRef<HTMLInputElement>(null);
+      <textarea
+        readOnly
+        value={`const ref = useRef<HTMLInputElement>(null);
 
 <DeutschBox
   id="demo-id"
   name="demo-name"
   ref={ref}
   checked={true}
-  color="#DD0000"
+  disabled={false}
   size={75}
   readOnly
-/>`}
-      </textarea>
+  />`}
+        spellCheck={false}
+      />
 
       <div className="external">
         <a href="https://github.com/fer-nando-machado/react-deutschbox">
