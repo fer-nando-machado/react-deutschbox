@@ -40,7 +40,7 @@ Publishes `dist` package to [npm](https://www.npmjs.com/package/react-deutschbox
 
 ## Dependencies
 
-Optionally, when importing this npm package, you can link the [`Press Start 2P`](https://fonts.google.com/specimen/Press+Start+2P) font to view it on your app.
+Optionally, when importing this npm package, you can link the [Press Start 2P](https://fonts.google.com/specimen/Press+Start+2P) so you can view it on your app.
 
 ```html
 <link
