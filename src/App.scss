@@ -8,10 +8,32 @@
   text-align: center;
   color: #000000;
 
+  .example {
+    display: flex;
+    width: 500px;
+    margin: 18px;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  textarea {
+    width: 500px;
+    padding: 18px;
+    height: 170px;
+    resize: none;
+  }
+
   .external {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
+    align-items: baseline;
+    gap: 18px;
+    margin: 18px;
+    padding: 9px;
   }
 }
