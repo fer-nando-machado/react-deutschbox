@@ -2,7 +2,7 @@ import "@testing-library/react";
 import "@testing-library/jest-dom";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { render, screen, fireEvent } from "@testing-library/react";
-import DeutschBox, { createEvent } from "./DeutschBox";
+import DeutschBox from "./DeutschBox";
 
 describe("DeutschBox", () => {
   let onChangeMock: ReturnType<typeof vi.fn>;
@@ -34,20 +34,31 @@ describe("DeutschBox", () => {
 
     fireEvent.click(button);
     expect(checkbox).toBeChecked();
-    expect(onChangeMock).toHaveBeenLastCalledWith(createEvent(true));
+    expect(onChangeMock).toHaveBeenCalledTimes(1);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: true },
+    });
 
     fireEvent.click(button);
     expect(checkbox).not.toBeChecked();
-    expect(onChangeMock).toHaveBeenLastCalledWith(createEvent(false));
-
-    fireEvent.click(button);
-    expect(checkbox).toBeChecked();
-    expect(onChangeMock).toHaveBeenLastCalledWith(createEvent(true));
-    expect(onChangeMock).toHaveBeenCalledTimes(3);
+    expect(onChangeMock).toHaveBeenCalledTimes(2);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: false },
+    });
 
     fireEvent.click(button);
     expect(checkbox).toBeChecked();
     expect(onChangeMock).toHaveBeenCalledTimes(3);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: true },
+    });
+
+    fireEvent.click(button);
+    expect(checkbox).toBeChecked();
+    expect(onChangeMock).toHaveBeenCalledTimes(3);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: true },
+    });
   });
 
   it("should not change state when disabled", () => {
