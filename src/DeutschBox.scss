@@ -69,7 +69,6 @@ $color: var(--color);
 .react-deutschbox label {
   position: absolute;
   left: calc($size + 13px);
-  top: calc($size * 0.5 - 13px);
   margin: calc($size * 0.25);
   z-index: 2;
 }
