@@ -1,37 +1,37 @@
 import { describe, it, expect } from "vitest";
 
 import {
-  DeutschBoxStateMap,
+  DeutschBoxMap,
   DeutschBoxState,
   getNextState,
 } from "./DeutschBoxState";
 
-describe("DeutschBoxStateMap", () => {
+describe("DeutschBoxState", () => {
   it("should verify settings for Unchecked", () => {
-    expect(DeutschBoxStateMap[DeutschBoxState.Unchecked]).toEqual({
+    expect(DeutschBoxMap[DeutschBoxState.Unchecked]).toEqual({
       label: "",
-      value: false,
+      checked: false,
     });
   });
 
   it("should verify settings for Checked", () => {
-    expect(DeutschBoxStateMap[DeutschBoxState.Checked]).toEqual({
+    expect(DeutschBoxMap[DeutschBoxState.Checked]).toEqual({
       label: "ja",
-      value: true,
+      checked: true,
     });
   });
 
   it("should verify settings for Dechecked", () => {
-    expect(DeutschBoxStateMap[DeutschBoxState.Dechecked]).toEqual({
+    expect(DeutschBoxMap[DeutschBoxState.Dechecked]).toEqual({
       label: "nein",
-      value: false,
+      checked: false,
     });
   });
 
   it("should verify settings for Rechecked", () => {
-    expect(DeutschBoxStateMap[DeutschBoxState.Rechecked]).toEqual({
+    expect(DeutschBoxMap[DeutschBoxState.Rechecked]).toEqual({
       label: "doch!",
-      value: true,
+      checked: true,
     });
   });
 });

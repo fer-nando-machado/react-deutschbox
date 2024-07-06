@@ -5,30 +5,29 @@ export enum DeutschBoxState {
   Rechecked = "rechecked",
 }
 
-interface DeutschBoxStateData {
+interface DeutschBoxData {
   label: string;
-  value: boolean;
+  checked: boolean;
 }
 
-export const DeutschBoxStateMap: Record<DeutschBoxState, DeutschBoxStateData> =
-  {
-    [DeutschBoxState.Unchecked]: {
-      label: "",
-      value: false,
-    },
-    [DeutschBoxState.Checked]: {
-      label: "ja",
-      value: true,
-    },
-    [DeutschBoxState.Dechecked]: {
-      label: "nein",
-      value: false,
-    },
-    [DeutschBoxState.Rechecked]: {
-      label: "doch!",
-      value: true,
-    },
-  };
+export const DeutschBoxMap: Record<DeutschBoxState, DeutschBoxData> = {
+  [DeutschBoxState.Unchecked]: {
+    label: "",
+    checked: false,
+  },
+  [DeutschBoxState.Checked]: {
+    label: "ja",
+    checked: true,
+  },
+  [DeutschBoxState.Dechecked]: {
+    label: "nein",
+    checked: false,
+  },
+  [DeutschBoxState.Rechecked]: {
+    label: "doch!",
+    checked: true,
+  },
+};
 
 export const getNextState = (current: DeutschBoxState): DeutschBoxState => {
   switch (current) {

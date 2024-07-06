@@ -2,7 +2,7 @@ import React, { forwardRef, InputHTMLAttributes, useState } from "react";
 import "./DeutschBox.scss";
 import {
   DeutschBoxState,
-  DeutschBoxStateMap,
+  DeutschBoxMap,
   getNextState,
 } from "./DeutschBoxState";
 import BubbleLabel from "./BubbleLabel";
@@ -36,7 +36,7 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
       setState(nextState);
 
       if (!onChange) return;
-      const event = createEvent(DeutschBoxStateMap[nextState].value);
+      const event = createEvent(DeutschBoxMap[nextState].checked);
       onChange(event);
     };
 
@@ -50,16 +50,16 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
         <input
           type="checkbox"
           hidden
-          checked={DeutschBoxStateMap[state].value}
+          checked={DeutschBoxMap[state].checked}
           ref={ref}
           disabled={disabled}
           onChange={onChange}
           {...props}
         />
         <button className={state} disabled={disabled} onClick={onClick} />
-        {feedback && DeutschBoxStateMap[state].label && (
+        {feedback && DeutschBoxMap[state].label && (
           <BubbleLabel direction={feedback} shadow>
-            {DeutschBoxStateMap[state].label}
+            {DeutschBoxMap[state].label}
           </BubbleLabel>
         )}
       </span>
