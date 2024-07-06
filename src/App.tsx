@@ -43,7 +43,7 @@ function App() {
       />
 
       <div className="example">
-        <div className="description">
+        <div>
           <h4>
             with state{" | "}
             <a href="https://react.dev/learn/typescript#typing-usestate">
@@ -85,7 +85,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         spellCheck={false}
       />
       <div className="example">
-        <div className="description">
+        <div>
           <h4>
             with references{" | "}
             <a href="https://react.dev/learn/referencing-values-with-refs">
@@ -93,7 +93,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
             </a>
           </h4>
           <span>
-            On uncontroled components, you can access the current value of{" "}
+            On uncontrolled components, you can access the current value of{" "}
             <code>
               <b>checked</b>
             </code>{" "}

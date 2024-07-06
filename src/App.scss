@@ -14,21 +14,19 @@
   }
 
   .header {
-    width: 80vw;
+    width: 85vw;
     max-width: 540px;
     text-align: justify;
   }
 
   .example {
     display: flex;
-    width: 80vw;
-    max-width: 520px;
+    width: 85vw;
+    max-width: 540px;
+    align-items: center;
 
-    .description {
-      display: flex;
-      flex-direction: column;
-      align-items: baseline;
-      width: 100%;
+    div {
+      min-width: 0;
     }
   }
 
