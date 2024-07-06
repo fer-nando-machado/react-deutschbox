@@ -19,14 +19,46 @@ function App() {
         <code>{"<DeutschBox/>"}</code>
       </h1>
 
-      <h3>usage examples</h3>
+      <span className="header">
+        <b>A checkbox done in German style.</b> In order to get started, you can
+        replace any instance of <code>{`<input type="checkbox"/>`}</code> in
+        your <a href="https://react.dev/">React</a> code by the imported{" "}
+        <code>{`<DeutschBox/>`}</code> component.
+      </span>
+
+      <span className="header">
+        You can interact with your <code>{`<DeutschBox/>`}</code> using the same
+        attributes you use on any regular <code>{`<input/>`}</code> from{" "}
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">
+          HTML
+        </a>
+        . See some examples below:
+      </span>
+
+      <textarea
+        readOnly
+        rows={1}
+        value={`import DeutschBox from "react-deutschbox";`}
+        spellCheck={false}
+      />
 
       <div className="example">
         <div className="description">
-          <h4>with state</h4>
-          <code>
-            checked: <b>{checked.toString()}</b>
-          </code>
+          <h4>
+            with state{" | "}
+            <a href="https://react.dev/learn/typescript#typing-usestate">
+              <code>useState()</code>
+            </a>
+          </h4>
+          <span>
+            Using states, you can manage the value of controlled components
+            dynamically like usual:{" "}
+            <code>
+              {"{"}
+              <b>checked:</b> {checked.toString()}
+              {"}"}
+            </code>
+          </span>
         </div>
         <DeutschBox
           checked={checked}
@@ -38,12 +70,13 @@ function App() {
       </div>
       <textarea
         readOnly
+        rows={11}
         value={`const [checked, setChecked] = useState(false);
 const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   setChecked(event.target.checked);
 };
 
-<DeutschBox'
+<DeutschBox
   checked={checked}
   onChange={onChange}
   feedback="left"
@@ -51,13 +84,24 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 />`}
         spellCheck={false}
       />
-
       <div className="example">
         <div className="description">
-          <h4>with references</h4>
-          <button onClick={() => alert(ref.current?.checked)}>
-            <code>alert(ref.current?.checked)</code>
-          </button>
+          <h4>
+            with references{" | "}
+            <a href="https://react.dev/learn/referencing-values-with-refs">
+              <code>useRef()</code>
+            </a>
+          </h4>
+          <span>
+            On uncontroled components, you can access the current value of{" "}
+            <code>
+              <b>checked</b>
+            </code>{" "}
+            directly:{" "}
+            <button onClick={() => alert(ref.current?.checked)}>
+              <code>alert(ref.current?.checked);</code>
+            </button>
+          </span>
         </div>
         <DeutschBox
           id="demo-id"
@@ -71,6 +115,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       </div>
       <textarea
         readOnly
+        rows={11}
         value={`const ref = useRef<HTMLInputElement>(null);
 
 <DeutschBox
@@ -84,7 +129,6 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 />`}
         spellCheck={false}
       />
-
       <div className="external">
         <a href="https://github.com/fer-nando-machado/react-deutschbox">
           <img src={GitHubLogo} alt="react-deutschbox @ GitHub" height="25" />

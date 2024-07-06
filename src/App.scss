@@ -5,20 +5,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   color: #000000;
+  gap: 9px;
+  line-height: 1.5;
+
+  a {
+    color: initial;
+  }
+
+  .header {
+    width: 80vw;
+    max-width: 540px;
+    text-align: justify;
+  }
 
   .example {
     display: flex;
     width: 80vw;
-    max-width: 500px;
-    margin: 18px;
+    max-width: 520px;
 
     .description {
       display: flex;
       flex-direction: column;
       align-items: baseline;
-      text-align: left;
       width: 100%;
     }
   }
@@ -27,7 +36,7 @@
     width: 80vw;
     max-width: 500px;
     padding: 18px;
-    height: 170px;
+    margin: 18px 0;
     resize: none;
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;

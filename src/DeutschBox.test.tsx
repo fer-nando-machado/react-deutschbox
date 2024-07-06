@@ -95,12 +95,26 @@ describe("DeutschBox", () => {
   });
 
   it("should pass default InputHTMLAttributes to hidden checkbox", () => {
-    render(<DeutschBox id="7" name="test" required disabled readOnly />);
+    render(
+      <DeutschBox
+        id="7"
+        name="hobbies"
+        value="swimming"
+        aria-label="Hobbies"
+        checked
+        required
+        disabled
+        readOnly
+      />
+    );
 
     const checkbox = document.querySelector('input[type="checkbox"]');
 
     expect(checkbox).toHaveAttribute("id", "7");
-    expect(checkbox).toHaveAttribute("name", "test");
+    expect(checkbox).toHaveAttribute("name", "hobbies");
+    expect(checkbox).toHaveAttribute("aria-label", "Hobbies");
+    expect(checkbox).toHaveAttribute("value", "swimming");
+    expect(checkbox).toHaveAttribute("checked", "");
     expect(checkbox).toHaveAttribute("required", "");
     expect(checkbox).toHaveAttribute("readOnly", "");
     expect(checkbox).toHaveAttribute("disabled", "");
