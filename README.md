@@ -31,7 +31,7 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Installs project dependencies.
+Installs the project dependencies.
 
 ### `npm start`
 
@@ -43,15 +43,15 @@ Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.
+Builds the app for production on the `build` folder.
 
 ### `npm run preview`
 
-Runs the existing `build` in the preview mode.
+Runs the `build` in preview mode.
 
 ### `npm run deploy`
 
-Publishes static `build` to GitHub Pages using [gh-pages](https://github.com/tschaub/gh-pages). Tutorial [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f).
+Publishes the `build` to GitHub Pages using [gh-pages](https://github.com/tschaub/gh-pages). Tutorial [here](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f).
 
 ### `npm run build:dist`
 
@@ -59,4 +59,4 @@ Builds the package for distribution on the `dist` folder.
 
 ### `npm publish`
 
-Publishes `dist` package to [npm](https://www.npmjs.com/package/react-deutschbox).
+Publishes the package from `dist` to [npm](https://www.npmjs.com/package/react-deutschbox).
