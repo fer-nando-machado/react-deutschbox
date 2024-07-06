@@ -1,7 +1,5 @@
 import { useRef, useState } from "react";
 import DeutschBox from "./DeutschBox";
-import GitHubLogo from "./assets/github.svg";
-import NPMLogo from "./assets/npm.svg";
 
 import "./App.scss";
 
@@ -130,11 +128,17 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         spellCheck={false}
       />
       <div className="external">
-        <a href="https://github.com/fer-nando-machado/react-deutschbox">
-          <img src={GitHubLogo} alt="react-deutschbox @ GitHub" height="25" />
-        </a>
         <a href="https://www.npmjs.com/package/react-deutschbox">
-          <img src={NPMLogo} alt="react-deutschbox @ npm" height="18" />
+          <img
+            alt="NPM version"
+            src="https://img.shields.io/npm/v/react-deutschbox?style=for-the-badge&logo=npm&color=black"
+          />
+        </a>
+        <a href="https://github.com/fer-nando-machado/react-deutschbox">
+          <img
+            alt="GitHub last update"
+            src="https://img.shields.io/github/last-commit/fer-nando-machado/react-deutschbox?style=for-the-badge&logo=github&label=last%20update&color=black"
+          />
         </a>
       </div>
     </div>
