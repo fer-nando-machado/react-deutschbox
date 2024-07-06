@@ -8,7 +8,7 @@ import {
 import BubbleLabel from "./BubbleLabel";
 
 interface DeutschBoxProps extends InputHTMLAttributes<HTMLInputElement> {
-  feedback?: boolean;
+  feedback?: "left" | "right";
 }
 
 const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
@@ -18,7 +18,7 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
       checked,
       disabled,
       size = 13,
-      color = "Highlight",
+      color = "#DD0000",
       onChange,
       ...props
     },
@@ -28,7 +28,7 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
       checked ? DeutschBoxState.Checked : DeutschBoxState.Unchecked
     );
 
-    const handleClick = () => {
+    const onClick = () => {
       if (disabled) return;
 
       const nextState: DeutschBoxState = getNextState(state);
@@ -46,7 +46,7 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
     } as React.CSSProperties;
 
     return (
-      <span className={"react-deutschbox"} style={style}>
+      <span className={"deutschbox"} style={style}>
         <input
           type="checkbox"
           hidden
@@ -56,9 +56,9 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
           onChange={onChange}
           {...props}
         />
-        <button className={state} disabled={disabled} onClick={handleClick} />
+        <button className={state} disabled={disabled} onClick={onClick} />
         {feedback && DeutschBoxStateMap[state].label && (
-          <BubbleLabel direction="right" shadow>
+          <BubbleLabel direction={feedback} shadow>
             {DeutschBoxStateMap[state].label}
           </BubbleLabel>
         )}

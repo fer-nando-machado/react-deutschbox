@@ -61,7 +61,7 @@ $border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white, $px -1 * $px $black
       -3 * $px 0 $white;
   }
 
-  &.left:after {
+  &.right:after {
     height: $px;
     width: $px;
     top: 5 * $px;
@@ -73,7 +73,7 @@ $border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white, $px -1 * $px $black
       -2 * $px -1 * $px $black, -1 * $px -2 * $px $black, 0 -1 * $px $white;
   }
 
-  &.right:after {
+  &.left:after {
     height: $px;
     width: $px;
     top: 5 * $px;

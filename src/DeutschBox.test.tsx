@@ -22,7 +22,7 @@ describe("DeutschBox", () => {
     expect(button).not.toBeChecked();
     expect(checkbox).toBeInTheDocument();
     expect(checkbox).not.toBeVisible();
-    expect(container).toHaveStyle("--color: Highlight");
+    expect(container).toHaveStyle("--color: #DD0000");
     expect(container).toHaveStyle("--size: 13px");
   });
 
@@ -82,7 +82,7 @@ describe("DeutschBox", () => {
   });
 
   it("should display the correct label when feedback is enabled", () => {
-    render(<DeutschBox feedback readOnly />);
+    render(<DeutschBox feedback="left" readOnly />);
 
     const button = screen.getByRole("button");
 

@@ -32,8 +32,8 @@ function App() {
           checked={checked}
           onChange={onChange}
           size={75}
-          color="#DD0000"
-          feedback={true}
+          feedback="left"
+          // feedback={Math.random() < 0.5 ? "left" : "right"}
         />
       </div>
       <textarea
@@ -43,11 +43,11 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   setChecked(event.target.checked);
 };
 
-<DeutschBox
+<DeutschBox'
   checked={checked}
   onChange={onChange}
-  size={75} color="#DD0000" 
-  feedback={true}
+  feedback="left"
+  size={75}
 />`}
         spellCheck={false}
       />
@@ -65,7 +65,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
           ref={ref}
           checked={true}
           size={75}
-          feedback={false}
+          color="green"
           readOnly
         />
       </div>
@@ -78,8 +78,8 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   name="demo-name"
   ref={ref}
   checked={true}
+  color="green"
   size={75}
-  feedback={false}
   readOnly
 />`}
         spellCheck={false}
