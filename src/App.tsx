@@ -16,6 +16,7 @@ function App() {
       <h1>
         <code>{"<DeutschBox/>"}</code>
       </h1>
+
       <div className="content">
         <p>
           <b>A checkbox done in German style.</b> In order to get started,
