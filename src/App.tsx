@@ -23,8 +23,8 @@ function App() {
           install this{" "}
           <a href="https://www.npmjs.com/package/react-deutschbox">package</a>{" "}
           and replace any instance of <code>{`<input type="checkbox"/>`}</code>{" "}
-          in your <a href="https://react.dev/">React</a> code by the imported{" "}
-          <code>{`<DeutschBox/>`}</code> component.
+          in your <a href="https://react.dev/">React</a> code by the newly
+          imported <code>{`<DeutschBox/>`}</code> component.
         </p>
         <textarea
           readOnly
@@ -33,13 +33,13 @@ function App() {
           spellCheck={false}
         />
         <p>
-          You will be able to interact with your <code>{`<DeutschBox/>`}</code>{" "}
-          through the same attributes you would use on any{" "}
-          <code>{`<input/>`}</code> from{" "}
+          You can interact with your <code>{`<DeutschBox/>`}</code> using the
+          same attributes you would use on any regular <code>{`<input/>`}</code>{" "}
+          from{" "}
           <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">
             HTML
-          </a>
-          . See the examples:
+          </a>{" "}
+          . See some examples:
         </p>
 
         <div className="example">

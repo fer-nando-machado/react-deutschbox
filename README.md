@@ -1,6 +1,6 @@
 # React DeutschBox
 
-![image](https://github.com/fer-nando-machado/react-deutschbox/assets/148105695/bb8ee1db-63bb-4ff1-8418-873a198b420a)
+[![image](https://github.com/fer-nando-machado/react-deutschbox/assets/148105695/bb8ee1db-63bb-4ff1-8418-873a198b420a)](https://fer-nando-machado.github.io/react-deutschbox/)
 
 [![NPM version](https://img.shields.io/npm/v/react-deutschbox?style=for-the-badge&logo=npm&color=black)](https://www.npmjs.com/package/react-deutschbox) [![GitHub last update](https://img.shields.io/github/last-commit/fer-nando-machado/react-deutschbox?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/fer-nando-machado/react-deutschbox)
 
@@ -8,13 +8,13 @@ A `<input type="checkbox"/>` done in German style.
 
 ## Getting Started
 
-After importing the package, you can replace any instance of `<input type="checkbox"/>` in your React code by the `<DeutschBox/>` component.
+In order to get started, install this package and replace any instance of `<input type="checkbox"/>` in your React code by the `<DeutschBox/>` component.
 
-```html
+```ts
 import DeutschBox from "react-deutschbox";
 ```
 
-You can interact with your `<DeutschBox/>` using the same attributes you use on any regular `<input/>` from HTML. See some examples at the [Demo page](https://fer-nando-machado.github.io/react-deutschbox/).
+You can interact with your `<DeutschBox/>` using the same attributes you would use on any regular `<input/>` from HTML. See some examples at the [Demo page](https://fer-nando-machado.github.io/react-deutschbox/).
 
 ## Dependencies
 
