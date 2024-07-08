@@ -19,7 +19,7 @@ $border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white, $px -1 * $px $black
   background-color: $white;
   color: $black;
   margin: 5 * $px;
-  padding: 2.5 * $px;
+  padding: $px 2 * $px;
   box-shadow: $border;
 
   &::after {
