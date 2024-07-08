@@ -20,11 +20,18 @@ function App() {
       <div className="content">
         <p>
           <b>A checkbox done in German style.</b> In order to get started,
-          install this package and replace any instance of{" "}
-          <code>{`<input type="checkbox"/>`}</code> in your{" "}
-          <a href="https://react.dev/">React</a> code by the imported{" "}
+          install this{" "}
+          <a href="https://www.npmjs.com/package/react-deutschbox">package</a>{" "}
+          and replace any instance of <code>{`<input type="checkbox"/>`}</code>{" "}
+          in your <a href="https://react.dev/">React</a> code by the imported{" "}
           <code>{`<DeutschBox/>`}</code> component.
         </p>
+        <textarea
+          readOnly
+          rows={1}
+          value={`import DeutschBox from "react-deutschbox";`}
+          spellCheck={false}
+        />
         <p>
           You will be able to interact with your <code>{`<DeutschBox/>`}</code>{" "}
           using the same attributes you use on any regular{" "}
@@ -34,12 +41,6 @@ function App() {
           </a>
           . See the examples:
         </p>
-        <textarea
-          readOnly
-          rows={1}
-          value={`import DeutschBox from "react-deutschbox";`}
-          spellCheck={false}
-        />
 
         <div className="example">
           <div>
