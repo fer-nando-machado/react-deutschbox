@@ -114,7 +114,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         </div>
         <textarea
           readOnly
-          rows={11}
+          rows={10}
           value={`const ref = useRef<HTMLInputElement>(null);
 
 <DeutschBox
