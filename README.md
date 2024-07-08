@@ -1,5 +1,7 @@
 # React DeutschBox
 
+![image](https://github.com/fer-nando-machado/react-deutschbox/assets/148105695/bb8ee1db-63bb-4ff1-8418-873a198b420a)
+
 [![NPM version](https://img.shields.io/npm/v/react-deutschbox?style=for-the-badge&logo=npm&color=black)](https://www.npmjs.com/package/react-deutschbox) [![GitHub last update](https://img.shields.io/github/last-commit/fer-nando-machado/react-deutschbox?style=for-the-badge&logo=github&label=GitHub&color=black)](https://github.com/fer-nando-machado/react-deutschbox)
 
 A `<input type="checkbox"/>` done in German style.
