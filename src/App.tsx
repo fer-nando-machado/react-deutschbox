@@ -137,7 +137,7 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         <a href="https://github.com/fer-nando-machado/react-deutschbox">
           <img
             alt="GitHub last update"
-            src="https://img.shields.io/github/last-commit/fer-nando-machado/react-deutschbox?style=for-the-badge&logo=github&label=last%20update&color=black"
+            src="https://img.shields.io/github/last-commit/fer-nando-machado/react-deutschbox?style=for-the-badge&logo=github&label=GitHube&color=black"
           />
         </a>
       </div>
