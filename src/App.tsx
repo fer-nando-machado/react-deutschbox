@@ -34,7 +34,7 @@ function App() {
         />
         <p>
           You will be able to interact with your <code>{`<DeutschBox/>`}</code>{" "}
-          using the same attributes you use on any regular{" "}
+          through the same attributes you would use on any{" "}
           <code>{`<input/>`}</code> from{" "}
           <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">
             HTML
