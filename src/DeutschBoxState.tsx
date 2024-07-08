@@ -29,7 +29,10 @@ export const DeutschBoxMap: Record<DeutschBoxState, DeutschBoxData> = {
   },
 };
 
-export const getNextState = (current: DeutschBoxState): DeutschBoxState => {
+export const getNextState = (
+  current: DeutschBoxState,
+  definitive?: boolean
+): DeutschBoxState => {
   switch (current) {
     case DeutschBoxState.Unchecked:
       return DeutschBoxState.Checked;
@@ -38,8 +41,7 @@ export const getNextState = (current: DeutschBoxState): DeutschBoxState => {
     case DeutschBoxState.Dechecked:
       return DeutschBoxState.Rechecked;
     case DeutschBoxState.Rechecked:
-    // TODO disable cycle feature
-    //  return DeutschBoxState.Rechecked;
+      return definitive ? DeutschBoxState.Rechecked : DeutschBoxState.Unchecked;
     default:
       return DeutschBoxState.Unchecked;
   }

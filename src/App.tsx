@@ -107,10 +107,8 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
             id="demo-id"
             name="demo-name"
             ref={ref}
-            checked={true}
             size={75}
             color="green"
-            readOnly
           />
         </div>
         <textarea
@@ -125,7 +123,6 @@ const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
   checked={true}
   color="green"
   size={75}
-  readOnly
 />`}
           spellCheck={false}
         />

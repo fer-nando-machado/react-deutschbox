@@ -12,7 +12,7 @@ describe("DeutschBox", () => {
   });
 
   it("should render default DeutschBox", () => {
-    render(<DeutschBox readOnly />);
+    render(<DeutschBox />);
 
     const button = screen.getByRole("button");
     const checkbox = document.querySelector('input[type="checkbox"]');
@@ -53,19 +53,46 @@ describe("DeutschBox", () => {
       target: { checked: true },
     });
 
-    // TODO disable cycle feature
-    // fireEvent.click(button);
-    // expect(checkbox).toBeChecked();
-    // expect(onChangeMock).toHaveBeenCalledTimes(3);
-    // expect(onChangeMock).toHaveBeenLastCalledWith({
-    //   target: { checked: true },
-    // });
-
     fireEvent.click(button);
     expect(checkbox).not.toBeChecked();
     expect(onChangeMock).toHaveBeenCalledTimes(4);
     expect(onChangeMock).toHaveBeenLastCalledWith({
       target: { checked: false },
+    });
+  });
+
+  it("should handle state changes correctly (with definitive behaviour)", () => {
+    render(<DeutschBox onChange={onChangeMock} definitive />);
+
+    const button = screen.getByRole("button");
+    const checkbox = document.querySelector('input[type="checkbox"]');
+
+    fireEvent.click(button);
+    expect(checkbox).toBeChecked();
+    expect(onChangeMock).toHaveBeenCalledTimes(1);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: true },
+    });
+
+    fireEvent.click(button);
+    expect(checkbox).not.toBeChecked();
+    expect(onChangeMock).toHaveBeenCalledTimes(2);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: false },
+    });
+
+    fireEvent.click(button);
+    expect(checkbox).toBeChecked();
+    expect(onChangeMock).toHaveBeenCalledTimes(3);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: true },
+    });
+
+    fireEvent.click(button);
+    expect(checkbox).toBeChecked();
+    expect(onChangeMock).toHaveBeenCalledTimes(3);
+    expect(onChangeMock).toHaveBeenLastCalledWith({
+      target: { checked: true },
     });
   });
 
@@ -82,7 +109,7 @@ describe("DeutschBox", () => {
   });
 
   it("should display the correct label when feedback is enabled", () => {
-    render(<DeutschBox feedback="left" readOnly />);
+    render(<DeutschBox feedback="left" />);
 
     const button = screen.getByRole("button");
 
@@ -104,7 +131,6 @@ describe("DeutschBox", () => {
         checked
         required
         disabled
-        readOnly
       />
     );
 
@@ -116,12 +142,11 @@ describe("DeutschBox", () => {
     expect(checkbox).toHaveAttribute("value", "swimming");
     expect(checkbox).toHaveAttribute("checked", "");
     expect(checkbox).toHaveAttribute("required", "");
-    expect(checkbox).toHaveAttribute("readOnly", "");
     expect(checkbox).toHaveAttribute("disabled", "");
   });
 
   it("should apply custom color and size styles to container", () => {
-    render(<DeutschBox color="#777777" size={20} readOnly />);
+    render(<DeutschBox color="#777777" size={20} />);
 
     const container = screen.getByRole("button").parentElement;
 

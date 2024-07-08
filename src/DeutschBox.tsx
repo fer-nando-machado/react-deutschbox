@@ -7,14 +7,28 @@ import {
 } from "./DeutschBoxState";
 import BubbleLabel from "./BubbleLabel";
 
+/**
+ * Props for the DeutschBox component
+ */
 interface DeutschBoxProps extends InputHTMLAttributes<HTMLInputElement> {
+  /**
+   * Specifies the position of the feedback bubble label
+   * @default undefined
+   */
   feedback?: "left" | "right";
+
+  /**
+   * If true, the component will not cycle after the last state
+   * @default false
+   */
+  definitive?: boolean;
 }
 
 const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
   (
     {
       feedback,
+      definitive,
       checked,
       disabled,
       size = 13,
@@ -31,7 +45,7 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
     const onClick = () => {
       if (disabled) return;
 
-      const nextState: DeutschBoxState = getNextState(state);
+      const nextState: DeutschBoxState = getNextState(state, definitive);
       if (nextState === state) return;
       setState(nextState);
 
@@ -50,6 +64,7 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
         <input
           type="checkbox"
           hidden
+          readOnly
           checked={DeutschBoxMap[state].checked}
           ref={ref}
           disabled={disabled}
