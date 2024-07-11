@@ -33,8 +33,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prepublishOnly": "npm run build:dist",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "prepublishOnly": "npm run build:dist"
   },
   "dependencies": {
     "react": "^18.3.1",
