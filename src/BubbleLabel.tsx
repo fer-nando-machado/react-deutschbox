@@ -17,7 +17,7 @@ const BubbleLabel: React.FC<BubbleLabelProps> = ({
     direction || "",
     shadow ? "shadow" : "",
   ].join(" ");
-  return <label className={classes}>{children}</label>;
+  return <div className={classes}>{children}</div>;
 };
 
 export default BubbleLabel;
