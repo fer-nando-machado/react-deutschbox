@@ -1,18 +1,18 @@
 import React, { forwardRef, InputHTMLAttributes, useState } from "react";
-import "./DeutschBox.scss";
+import Bubble from "./Bubble";
 import {
   DeutschBoxState,
   DeutschBoxMap,
   getNextState,
 } from "./DeutschBoxState";
-import BubbleLabel from "./BubbleLabel";
+import "./DeutschBox.scss";
 
 /**
  * Props for the DeutschBox component
  */
 interface DeutschBoxProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
-   * Specifies the position of the feedback bubble label
+   * Specifies the position of the feedback bubble
    * @default undefined
    */
   feedback?: "left" | "right";
@@ -73,9 +73,9 @@ const DeutschBox = forwardRef<HTMLInputElement, DeutschBoxProps>(
         />
         <button className={state} disabled={disabled} onClick={onClick} />
         {feedback && DeutschBoxMap[state].label && (
-          <BubbleLabel direction={feedback} shadow>
+          <Bubble direction={feedback} shadow>
             {DeutschBoxMap[state].label}
-          </BubbleLabel>
+          </Bubble>
         )}
       </span>
     );

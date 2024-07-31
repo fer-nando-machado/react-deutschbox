@@ -9,7 +9,7 @@ $border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white, $px -1 * $px $black
   -1 * $px $px $black, -2 * $px 0 $black, -1 * $px -1 * $px $black,
   $px $px $black;
 
-.bubble-label {
+.bubble {
   position: relative;
   display: inline-block;
   font-family: "Press Start 2P", cursive;
