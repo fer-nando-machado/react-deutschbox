@@ -10,7 +10,7 @@ import "./DeutschBox.scss";
 /**
  * Props for the DeutschBox component
  */
-interface DeutschBoxProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface DeutschBoxProps extends InputHTMLAttributes<HTMLInputElement> {
   /**
    * Specifies the position of the feedback bubble
    * @default undefined
