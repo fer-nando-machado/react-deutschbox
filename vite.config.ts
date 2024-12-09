@@ -34,6 +34,13 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
+      css: {
+        preprocessorOptions: {
+          scss: {
+            api: "modern",
+          },
+        },
+      },
     };
   }
 
@@ -42,6 +49,13 @@ export default defineConfig(({ mode }) => {
     base: "/react-deutschbox/",
     build: {
       outDir: "build",
+    },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern",
+        },
+      },
     },
     test: {
       globals: true,
